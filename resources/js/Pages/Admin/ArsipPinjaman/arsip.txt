@@ -1,0 +1,19 @@
+									<div className="mb-4">
+                                        <label
+                                            className="text-xl text-gray-600"
+                                            htmlFor="ruangan"
+                                        >
+                                            Ruangan yang ingin dipinjam
+                                        </label>
+                                        <Select
+                                            id="nama_ruangan"
+                                            name="nama_ruangan"
+                                            className="basic-single"
+                                            classNamePrefix="select"
+                                            components={animatedComponents}
+                                            options={opsiRuangan}
+                                            onChange={(options) =>
+                                                setData("nama_ruangan", options)
+                                            }
+                                        />
+                                    </div>

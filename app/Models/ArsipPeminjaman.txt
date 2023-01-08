@@ -1,0 +1,8 @@
+protected $fillable = [
+        'nama_ruangan',
+        'nama_peminjam',
+        'email_peminjam',
+        'keterangan',
+        'tanggal_mulai_peminjaman',
+        'tanggal_selesai_peminjaman',
+    ];

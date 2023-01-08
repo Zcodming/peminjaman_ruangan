@@ -1,0 +1,11 @@
+Schema::create('arsip_peminjamans', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_ruangan');
+            $table->string('nama_peminjam');
+            $table->string('email_peminjam')->unique();
+            $table->string('keterangan');
+            $table->date('tanggal_mulai_peminjaman')->nullable();
+            $table->date('tanggal_selesai_peminjaman')->nullable();
+            $table->time('waktu_peminjaman')->nullable();
+            $table->timestamps();
+        });

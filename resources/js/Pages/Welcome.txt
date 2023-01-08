@@ -1,0 +1,61 @@
+import React from 'react';
+import Authenticated from '@/Layouts/Authenticated';
+import { Link, Head } from '@inertiajs/inertia-react';
+
+export default function Welcome(props) {
+    console.log('props', props);
+    return (
+        <Authenticated
+            auth={props.auth}
+            errors={props.errors}
+            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>}
+        >
+            <Head title="Welcome" />
+            <div className="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+                <div className="fixed top-0 right-0 px-6 py-4 sm:block">
+                    {props.auth.user ? (
+                        <Link href={route('dashboard')} className="text-sm text-gray-700 dark:text-gray-500 underline">
+                            Dashboard
+                        </Link>
+                    ) : (
+                        <>
+                            <Link href={route('login')} className="text-sm text-gray-700 dark:text-gray-500 underline">
+                                Log in
+                            </Link>
+
+                            <Link
+                                href={route('register')}
+                                className="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"
+                            >
+                                Register
+                            </Link>
+                        </>
+                    )}
+                </div>
+
+                <div className="container mx-auto items-center flex flex-wrap">
+                    <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
+                        <div className="pt-32 sm:pt-0">
+                        <h2 className="font-semibold text-4xl text-blueGray-600">
+                            Notus React - A beautiful extension for Tailwind CSS.
+                        </h2>
+                        <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
+                            Notus React is Free and Open Source. It does not change any of
+                            the CSS from{" "}
+                            <a
+                            href="https://tailwindcss.com/?ref=creativetim"
+                            className="text-blueGray-600"
+                            target="_blank"
+                            >
+                            Tailwind CSS
+                            </a>
+                            . It features multiple HTML elements and it comes with dynamic
+                            components for ReactJS, Vue and Angular.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Authenticated>
+    );
+}
