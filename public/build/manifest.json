@@ -31,7 +31,7 @@
       "resources/js/Pages/Welcome.jsx"
     ],
     "css": [
-      "assets/app.9d6da070.css"
+      "assets/app.5b008e9a.css"
     ]
   },
   "resources/js/Pages/Admin/ArsipPinjaman/Arsip.jsx": {
@@ -570,12 +570,12 @@
       "_Dropdown.0eacccd8.js"
     ]
   },
-  "resources/js/app.css": {
-    "file": "assets/app.9d6da070.css",
-    "src": "resources/js/app.css"
-  },
   "ModalEvent.css": {
     "file": "assets/ModalEvent.08278478.css",
     "src": "ModalEvent.css"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app.5b008e9a.css",
+    "src": "resources/js/app.css"
   }
 }
